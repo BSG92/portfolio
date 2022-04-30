@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&family=Poppins:wght@100;200;300;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --light-blue: #b4cfe9;
+  --light-purple: #B6AEE8;
+  --light-green: #AAE897;
+  --light-red: #E89C80;
+  --light-yellow: #EBD460;
+
+  --dark-blue: #2F82A8;
+  --dark-purple: #6454D1;
+  --dark-green: #5F8255;
+  --dark-red: #A32C3C;
+  --dark-yellow: #EDD351;
+
+  --ease : all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: 'Poppins', sans-serif;  */
+  font-family: 'Nunito', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: whitesmoke;
+  line-height: 1.7;
+  /* background-image: url('./assets/background_pattern.jpeg');
+  background-blend-mode: screen; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============ GENERAL STYLES ============== */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h2, section > h5 {
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+section > h2 {
+  margin-bottom: 3rem;
+}
+
+a {
+  color: var(--dark-blue);
+  transition: var(--ease);
+}
+
+a:hover {
+  color: var(--light-blue);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+ /* ============== BUTTON STYLES ================== */
+.btn {
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 1.2rem; /* top-bottom left-right */
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn-blue {
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  transition: var(--ease);
+}
+
+.btn-blue:hover {
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+}
+
+.btn-blue_fill {
+  color: var(--light-blue);
+  background-color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  transition: var(--ease);
+}
+
+.btn-blue_fill:hover {
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+}
+
+.btn-green {
+  color: var(--dark-green);
+  border: 1px solid var(--dark-green);
+  transition: var(--ease);
+}
+
+.btn-green_fill {
+  color: var(--dark-green);
+  border: 1px solid var(--light-green);
+  transition: var(--ease);
+}
+
+.btn-green_fill:hover {
+  color: darkslategray;
+  background-color: var(--light-green);
+  transition: var(--ease);
+}
+
+.btn-green:hover {
+  color: var(--light-green);
+  border: 1px solid var(--light-green);
+}
+
+.btn-purple {
+  color: var(--dark-purple);
+  border: 1px solid var(--dark-purple);
+  transition: var(--ease);
+}
+
+.btn-purple:hover {
+  color: var(--light-purple);
+  border: 1px solid var(--light-purple);
+}
+
+.btn-red {
+  color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+  transition: var(--ease);
+}
+
+.btn-red:hover {
+  color: var(--dark-red);
+  background-color: var(--light-red);
+  border: 1px solid var(--light-red);
+}
+
+.btn-yellow {
+  color: var(--dark-yellow);
+  border: 1px solid var(--dark-yellow);
+  transition: var(--ease);
+}
+
+.btn-yellow:hover {
+  color: var(--light-yellow);
+  border: 1px solid var(--light-yellow);
+}
+
+.text-light {
+  color: whitesmoke;
+}
+
+.text-dark {
+  color: darkslategrey;
+}
+
+/* ============== MEDIA QUERIES ============== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+    /* height: 100vh; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section {
+    margin-top: 2rem;
+  }
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
